@@ -1,5 +1,6 @@
 (function ($) {
-        $.fn.checkRegex = function (ex) {
+    'use strict';
+        $.fn.validateText = function (ex) {
             $(this).change(function () {
                 ex = new RegExp(ex);
                 if(ex.test($(this).val())){
@@ -9,9 +10,7 @@
                 $(this).addClass("error");
                 $(this).removeClass("success");
             }
-        });
-
-            
+        });           
             return this;
     };
 }(jQuery));
