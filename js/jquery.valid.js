@@ -1,6 +1,17 @@
-
 (function ($) {
-        $.fn.checkRegex = function (regex) {
+        $.fn.checkRegex = function (ex) {
+            $(this).change(function () {
+                ex = new RegExp(ex);
+                if(ex.test($(this).val())){
+                    $(this).addClass("success");
+                    $(this).removeClass("error");
+            } else {
+                $(this).addClass("error");
+                $(this).removeClass("success");
+            }
+        });
+
             
+            return this;
     };
 }(jQuery));
