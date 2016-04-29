@@ -6,9 +6,11 @@
                 if(ex.test($(this).val())){
                     $(this).addClass("success");
                     $(this).removeClass("error");
+                    $(this).parent().find("button[type='submit']").attr("disabled", false);
             } else {
                 $(this).addClass("error");
                 $(this).removeClass("success");
+                 $(this).parent().find("button[type='submit']").attr("disabled", true);
             }
         });           
             return this;

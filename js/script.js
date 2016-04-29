@@ -1,6 +1,6 @@
 (function ($) {
     'use strict';
      $(function () {
-         $("#inputEmail").validateText(/^[A-Z]*$/);
+         $("#inputEmail").validateText(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/);
      });   
 }(jQuery));
